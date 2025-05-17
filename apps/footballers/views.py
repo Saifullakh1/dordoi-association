@@ -4,12 +4,12 @@ from .serializers import FootballSerializer, FootballerDetailSerializer
 
 
 class FootballerListAPIView(ListAPIView):
-    queryset = Footballer.objects.all()
+    queryset = Footballer.objects.filter(is_active=True)
     serializer_class = FootballSerializer
 
 
 class FootballDetailAPIView(RetrieveAPIView):
-    queryset = Footballer.objects.all()
+    queryset = Footballer.objects.filter(is_active=True)
     serializer_class = FootballerDetailSerializer
     lookup_field = "slug"
 

@@ -41,7 +41,9 @@ INSTALLED_APPS = [
 
     # apps
     'apps.news',
-    'apps.footballers'
+    'apps.footballers',
+    'apps.histories',
+    'apps.matches'
 ]
 
 MIDDLEWARE = [
