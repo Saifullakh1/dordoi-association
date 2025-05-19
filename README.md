@@ -1,8 +1,10 @@
 ## How to install application for the first time
 
-1. From terminal run command `python3 -m venv env`
-2. Then run `source env/bin/activate`
-3. Then run `pip install -r requirements.txt` for install all requirements
+1. From terminal run command `git clone https://github.com/Saifullakh1/gov-social`
+2. After clone run `cd gov-social`
+3. From terminal run command `python3 -m venv env`
+4. Then run `source env/bin/activate`
+5. Then run `pip install -r requirements.txt` for install all requirements
 
 ## How to run app on your local machine
 
