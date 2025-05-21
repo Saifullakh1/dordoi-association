@@ -1,6 +1,7 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView
-from .models import Footballer
-from .serializers import FootballSerializer, FootballerDetailSerializer
+from rest_framework import viewsets
+from .models import Footballer, Banner, Stories
+from .serializers import FootballSerializer, FootballerDetailSerializer, BannerSerializer, StoriesSerializer
 
 
 class FootballerListAPIView(ListAPIView):
@@ -13,6 +14,14 @@ class FootballDetailAPIView(RetrieveAPIView):
     serializer_class = FootballerDetailSerializer
     lookup_field = "slug"
 
+
+class BannerListAPIView(ListAPIView):
+    queryset = Banner.objects.all()
+    serializer_class = BannerSerializer
+
+class StoriesAPIView(ListAPIView):
+    queryset = Stories.objects.all()
+    serializer_class = StoriesSerializer
 
 
 
