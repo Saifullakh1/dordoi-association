@@ -30,6 +30,7 @@ class Footballer(models.Model):
     citizenship = models.CharField(max_length=255, choices=CitizenshipChoice.choices, verbose_name="Гражданство")
     position = models.CharField(max_length=155, choices=PositionChoice.choices, verbose_name="Позиция")
     slug = models.SlugField(max_length=255, unique=True, null=True, blank=True, verbose_name="Слаг")
+    is_active = models.BooleanField(default=True, verbose_name="Активный")
 
     def save(self, *args, **kwargs):
         if not self.slug:
