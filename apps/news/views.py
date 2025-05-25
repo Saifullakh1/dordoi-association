@@ -4,5 +4,5 @@ from .serializers import NewsSerializer
 
 
 class NewsListAPIView(ListAPIView):
-    queryset = News.objects.all()
+    queryset = News.objects.filter(is_active=True)
     serializer_class = NewsSerializer

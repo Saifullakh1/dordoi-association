@@ -38,6 +38,8 @@ schema_view = get_schema_view(
 api_urlpattern = [
     path('', include('apps.news.urls')),
     path('', include('apps.footballers.urls')),
+    path('', include('apps.histories.urls')),
+    path('', include('apps.matches.urls')),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
 
