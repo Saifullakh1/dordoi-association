@@ -5,7 +5,7 @@ from .models import Image, History
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Image
-        fields = ("id", "image")
+        fields = ("id", "image", "type")
 
 
 class HistorySerializer(serializers.ModelSerializer):

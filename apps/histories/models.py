@@ -1,8 +1,16 @@
 from django.db import models
 
 
+class ImageType(models.TextChoices):
+    banner = "banner"
+    default = "default"
+
+
 class Image(models.Model):
     image = models.FileField(upload_to='images', verbose_name="Картинка")
+    type = models.CharField(max_length=155, choices=ImageType.choices,
+                            default=ImageType.default, verbose_name="Тип картинки"
+                            )
 
     class Meta:
         verbose_name = "Картинка"
